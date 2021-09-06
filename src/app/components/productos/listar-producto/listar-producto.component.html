@@ -1,0 +1,53 @@
+<div id="content" class="bg-grey w-80">
+    <div class="container">
+        <br>
+        <div class="card border-primary " mb-3 style="max-width: 1500px;">
+            <div class="card-header border-primary mb-3">
+                <a class="btn btn-info" routerLink="/agregar-producto/"><img src="assets/img/icons/maintenance.png" />
+                    Agregar nuevo producto</a>
+            </div>
+            <div class="card-body">
+                <h3>Lista de productos</h3> <br>
+                <div class="table-responsive">
+                    <table class="table table-bordered border-dark">
+                        <thead>
+                            <tr class="bg-primary ">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>No. Serie</th>
+                                <th>Fallo</th>
+                                <th>Diagnostico</th>
+                                <th>Anticipo</th>
+                                <th>Fecha de entrada</th>
+                                <th>ID del cliente</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let Producto of Productos; let iControl=index "
+                                class="table-primary border-dark">
+                                <td>{{Producto.idProducto}}</td>
+                                <td>{{Producto.nombre}}</td>
+                                <td>{{Producto.marca}}</td>
+                                <td>{{Producto.modelo}}</td>
+                                <td>{{Producto.noSerie}}</td>
+                                <td>{{Producto.fallo}}</td>
+                                <td>{{Producto.diagnostico}}</td>
+                                <td>{{Producto.anticipo}}</td>
+                                <td>{{Producto.fechaEntrada}}</td>
+                                <td>{{Producto.idClienteP}}</td>
+                                <td> <a class="btn btn-primary"
+                                        routerLink="/editar-producto/{{Producto.idProducto}}"><img
+                                            src="assets/img/icons/create-new1.png" /> Editar</a> |
+                                    <a class="btn btn-danger" (click)="borrarRegistro(Producto.idProducto, iControl)"
+                                        role="button"><img src="assets/img/icons/delete1.png" /> Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

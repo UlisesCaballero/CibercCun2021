@@ -1,0 +1,46 @@
+<div id="content" class="bg-grey w-100">
+<div class="container">
+<br>
+<div class="card">
+  <div class="card-header">
+    <h3>Editar cliente</h3>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formularioClientes" (ngSubmit)="enviarDatos()">
+      <div class="row">
+        <div class="col">
+          <label for="" class="form-group">Nombre:</label>
+          <input type="text" class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId"
+            placeholder="Escribe el nombre">
+        </div>
+        <div class="col">
+          <label for="" class="form-group">Apellido:</label>
+          <input type="text" class="form-control" name="" formControlName="apellido"
+            placeholder="Escribe el apellido">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="" class="form-label">Teléfono:</label>
+          <input type="number" class="form-control" name="" formControlName="telefono" id="" aria-describedby="helpId"
+            placeholder="Escribe el télefono">
+        </div>
+        <div class="col">
+          <label for="" class="form-label">Correo:</label>
+          <input type="email" class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId"
+            placeholder="Escribe el correo">
+        </div>
+      </div>
+      <br>
+        <div class="btn-group" role="group" aria-label="">
+          <tr>
+            <button type="submit" class="btn btn-primary"><img src="assets/img/icons/create-new.png"/> Editar</button> |
+            <button type="submit" class="btn btn-danger" routerLink="/lista-cliente"> <img src="assets/img/icons/cancel--v1.png"/> Cancelar</button> 
+          </tr>
+          
+        </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>

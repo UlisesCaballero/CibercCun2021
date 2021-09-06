@@ -1,0 +1,57 @@
+<!--<footer class="ae-container-fluid rk-footer footer-ciber ">
+    <div class="ae-grid ae-grid--collapse">
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+        <ul class="rk-menu rk-footer-menu">
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="home" class="rk-menu__link" >Inicio</a>
+          </li>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="agregar-cliente" class="rk-menu__link">Agregar cliente</a>
+          </li>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="listar-cliente" class="rk-menu__link">Listar cliente</a>
+          </li>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="agregar-producto" class="rk-menu__link">Agregar producto</a>
+          </li>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="listar-producto" class="rk-menu__link">Listar producto</a>
+          </li>
+        </ul>
+        <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">©</span><span class="ae-u-bolder">{{anio}} CIBERCUN </span>
+          Todos los derechos reservados.</p>
+      </div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+    
+        <a [href]="_infoServicio.info.facebook"><img src="assets/img/icons/facebook.png"/></a>
+        <a [href]="_infoServicio.info.whatsapp"><img src="assets/img/icons/whatsapp.png"/></a>
+        <a [href]="_infoServicio.info.instagram"><img src="assets/img/icons/instagram.png"/></a>
+        
+       </div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+        <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: <img src="assets/img/icons/gmail.png"/></span><span class="ae-u-bolder"> <a href="mailTO:{{_infoServicio.info.email}}" class="rk-dark-color ">{{_infoServicio.info.email}}</a></span></p>
+      </div>
+    </div>
+  </footer> -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-1 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a [href]="_infoServicio.info.facebook"><img src="assets/img/icons/facebook.png"/></a>
+  
+        <!-- Whatsaap -->
+        <a [href]="_infoServicio.info.whatsapp"><img src="assets/img/icons/whatsapp.png"/></a>
+        <!-- Instagram -->
+        <a [href]="_infoServicio.info.instagram"><img src="assets/img/icons/instagram.png"/></a>
+        <!-- Correo -->
+        <a href="mailTO:{{_infoServicio.info.email}}"><img src="assets/img/icons/gmail.png"/></a>
+      
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>

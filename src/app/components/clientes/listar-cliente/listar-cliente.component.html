@@ -1,0 +1,41 @@
+<div id="content" class="bg-grey w-100">
+    <div class="container">
+        <br>
+        <div class="card border-primary " mb-3 style="max-width: 800px;">
+            <div class="card-header border-primary mb-3">
+                <a class="btn btn-info" routerLink="/agregar-cliente/"><img
+                        src="assets/img/icons/add-user-male--v1.png" /> Agregar nuevo cliente</a>
+            </div>
+            <div class="card-body">
+                <h3>Lista de clientes</h3> <br>
+                <div class="table-responsive">
+                    <table class="table table-bordered border-dark">
+                        <thead>
+                            <tr class="bg-primary ">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Télefono</th>
+                                <th>Correo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cliente of Clientes; let iControl=index" class="table-primary border-dark">
+                                <td>{{cliente.idCliente}}</td>
+                                <td>{{cliente.nombre}}</td>
+                                <td>{{cliente.apellido}}</td>
+                                <td>{{cliente.telefono}}</td>
+                                <td>{{cliente.correo}}</td>
+                                <td WIDTH="240"> <a class="btn btn-primary"
+                                        routerLink="/editar-cliente/{{cliente.idCliente}}"><img
+                                            src="assets/img/icons/create-new1.png" />Editar</a> |
+                                    <a class="btn btn-danger" (click)="borrarRegistro(cliente.idCliente, iControl)"
+                                        role="button"><img src="assets/img/icons/delete1.png" /> Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>

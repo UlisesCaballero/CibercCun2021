@@ -1,0 +1,74 @@
+<div id="content" class="bg-grey w-100">
+  <div class="container">
+    <br>
+    <div class="card">
+      <div class="card-header">
+        <h3>Editar producto</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="formularioProducto" (ngSubmit)="enviarDatosProducto()">
+          <div class="row">
+            <div class="col">
+              <label for="" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId"
+                placeholder="Escribe el nombre del equipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">Marca:</label>
+              <input type="text" class="form-control" name="" formControlName="marca" id="" aria-describedby="helpId"
+                placeholder="Escribe la marca del equipo">
+            </div>
+
+            <div class="col">
+              <label for="" class="form-label">Modelo:</label>
+              <input type="text" class="form-control" name="" formControlName="modelo" id="" aria-describedby="helpId"
+                placeholder="Escribe el modelo del equipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">No. Serie:</label>
+              <input type="text" class="form-control" name="" formControlName="noSerie" id="" aria-describedby="helpId"
+                placeholder="Escribe el No. de Serie del equipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">Fallo:</label>
+              <input type="text" class="form-control" name="" formControlName="fallo" id="" aria-describedby="helpId"
+                placeholder="Escribe el fallo del equipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">Diagnóstico:</label>
+              <input type="text" class="form-control" name="" formControlName="diagnostico" id=""
+                aria-describedby="helpId" placeholder="Escribe el diagnostico del equipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">Anticipo:</label>
+              <input type="text" class="form-control" name="" formControlName="anticipo" id="" aria-describedby="helpId"
+                placeholder="Escribe si el cliente dejo un anticipo">
+            </div>
+            <div class="col">
+              <label for="" class="form-label">Fecha de entrada:</label>
+              <input type="datetime" class="form-control" name="" formControlName="fechaEntrada" id=""
+                aria-describedby="helpId" placeholder="Elige la fecha de entrada del equipo">
+            </div>
+            <div class="col">
+              <label for="">ID del cliente</label>
+              <select class="form-control" formControlName="idClienteP">
+                <option class="caja" *ngFor="let Cliente of Clientes; let iControl=index ">{{Cliente.idCliente}}.
+                  {{Cliente.nombre}} {{Cliente.apellido}}</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="btn-group" role="group" aria-label="">
+            <tr>
+              <button type="submit" class="btn btn-primary"><img src="assets/img/icons/create-new.png" />
+                Editar</button> |
+              <button type="submit" class="btn btn-danger" routerLink="/lista-producto"> <img
+                  src="assets/img/icons/cancel--v1.png" /> Cancelar</button>
+            </tr>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
